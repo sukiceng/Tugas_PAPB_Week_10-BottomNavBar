@@ -7,6 +7,7 @@ import com.example.tugaspapbweek9.FragmentsPackage.HomeFragment
 import com.example.tugaspapbweek9.FragmentsPackage.ProfileFragment
 import com.example.tugaspapbweek9.FragmentsPackage.TicketFragment
 import com.example.tugaspapbweek9.databinding.ActivityMainBinding
+import com.example.tugaspapbweek9.databinding.FragmentHomeBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,16 +16,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         // atur tampilan awal dari fragement
         switchFragment(HomeFragment())
 
-        binding.bottomNavigationView.setOnClickListener {
-            when (it.id) {
+        binding.bottomNavigationView.setOnItemSelectedListener{
+            when(it.itemId){
                 R.id.home -> switchFragment(HomeFragment())
                 R.id.ticket -> switchFragment(TicketFragment())
                 R.id.profile -> switchFragment(ProfileFragment())
-                else -> {
+                else ->{
 
                 }
             }
