@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TugasPAPBWeek9" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/darker_grey</item>
     </style>
 
     <style name="Theme.TugasPAPBWeek9" parent="Base.Theme.TugasPAPBWeek9" />
